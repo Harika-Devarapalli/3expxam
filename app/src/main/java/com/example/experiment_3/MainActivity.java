@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
@@ -19,7 +18,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button;
+    Button button,emailButton;
     private static final int CAMERA_CODE = 4196;
     ImageView imageView;
     private static final int REQUEST_CODE = 100;
@@ -51,6 +50,15 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                     startActivityForResult(intent,CAMERA_CODE);
                 }
+            }
+        });
+
+
+        emailButton = findViewById(R.id.email_button);
+        emailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),MailActivity.class));
             }
         });
     }
