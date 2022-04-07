@@ -18,7 +18,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button,emailButton;
+    Button button,emailButton,formButton;
     private static final int CAMERA_CODE = 4196;
     ImageView imageView;
     private static final int REQUEST_CODE = 100;
@@ -59,6 +59,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),MailActivity.class));
+            }
+        });
+
+        formButton= findViewById(R.id.formButton);
+        formButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),FormActivity.class));
             }
         });
     }

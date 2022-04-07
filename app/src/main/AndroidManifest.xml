@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Experiment3">
         <activity
+            android:name=".FormDisplay"
+            android:exported="false" />
+        <activity
             android:name=".FormActivity"
             android:exported="false" />
         <activity
