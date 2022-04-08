@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="20dp"
     tools:context=".MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="560dp"
+        android:layout_height="460dp"
         android:id="@+id/imagecap"/>
     <Button
         android:layout_width="match_parent"
